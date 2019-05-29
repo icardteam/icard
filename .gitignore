@@ -1,4 +1,4 @@
-##### 简单语法 ########
+﻿##### 简单语法 ########
 # 以斜杠“/”开头表示目录；
 # /file/ 过滤整个文件夹
 # file/ 过滤所有名为file文件夹下的文件,不管哪个目录
@@ -21,3 +21,33 @@ target/
 .classpath
 stralms-modules/stralms-tool/src/main/resources/application-dev.yml
 /data/
+
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
