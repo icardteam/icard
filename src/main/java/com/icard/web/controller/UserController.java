@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.icard.web.model.UserInfoFromWeChat;
+import com.icard.web.model.UserInfoRequest;
 import com.icard.web.severity.UserAuthenticationSeverity;
 
 @Controller
@@ -26,10 +27,10 @@ public class UserController {
 	@PostMapping(path = "/user")
     @ResponseBody
 	public @NotNull UserInfoFromWeChat getSeverityRatio(
-			@RequestBody @Validated String code) {
+			@RequestBody @Validated UserInfoRequest info) {
 		UserInfoFromWeChat result = null;
 		try {
-    		result = userAuthenticationSeverity.getOpenId(code);
+    		result = userAuthenticationSeverity.getOpenId(info.getCode());
 		} catch (JSONException e) {
 			return null;
 		}
