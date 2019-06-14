@@ -27,15 +27,17 @@ public class UserAuthenticationSeverityImp implements  UserAuthenticationSeverit
 	
 	@Override
 	public UserInfoFromWeChat getOpenId(String js_code) throws JSONException {
+		UserInfoFromWeChat userInfoFromWeChat = new UserInfoFromWeChat();
+		
 		HttpRequestSeverity httpRequest = new HttpRequestSeverity("https://api.weixin.qq.com/sns/jscode2session");	
 		Map<String, String> info = this.appInfoConfig.makeMap();
 		info.put("js_code", js_code);
 		JSONObject result = httpRequest.get(info);
 		if (!result.get("errcode").toString().equals("0")) {
-			return null;
+			return userInfoFromWeChat;
 		}
 		
-		UserInfoFromWeChat userInfoFromWeChat = new UserInfoFromWeChat();
+		
 		userInfoFromWeChat.setOpenid(result.get("openid").toString());
 		userInfoFromWeChat.setSession_key(result.get("session_key").toString());
 		userInfoFromWeChat.setUnionid(result.get("unionid").toString());

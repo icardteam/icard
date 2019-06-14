@@ -10,7 +10,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 
@@ -60,8 +59,6 @@ public class HttpRequestSeverity {
 			httpget.abort();
 		}
 		return result;
-
-		
 	}
 
 	private String makeGetUrl(Map<String, String> infos) {

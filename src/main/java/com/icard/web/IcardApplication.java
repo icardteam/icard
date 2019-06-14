@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "com.icard.web"})
+@ComponentScan(basePackages = {"com.icard.web"})
+
 public class IcardApplication {
 
 	public static void main(String[] args) {
