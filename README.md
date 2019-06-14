@@ -13,3 +13,16 @@
 
 
 ## 其他待补充
+
+
+## BE环境构筑
+目前环境使用 
+・postgres 
+・eclipse Oxygen
+------------------
+1.安装postgres （本项目支持mysql）。
+2.eclipse中，添加导入maven项目。（在导入前可在marketplace中安装spring tool suite)
+3.在src/main/resources/application.propertise中，设置微信小程序的信息和数据库连接信息。
+4.启动选择 springboot App。
+
+※本项目使用flyway管理数据库。启动flyway报错可删除所有表单后再启动。
