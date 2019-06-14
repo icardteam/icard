@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿##### 简单语法 ########
 # 以斜杠“/”开头表示目录；
 # /file/ 过滤整个文件夹
@@ -22,6 +23,8 @@ target/
 stralms-modules/stralms-tool/src/main/resources/application-dev.yml
 /data/
 
+=======
+>>>>>>> Refactoring package
 HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
